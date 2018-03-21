@@ -1,11 +1,15 @@
 $(document).ready(function () {
     // jQuery methods go here...
     console.log("ready!");
-    $("#c-1").css("background-color", "#450920");
-    $("#c-2").css("background-color", "#a53860");
-    $("#c-3").css("background-color", "#da627d");
-    $("#c-4").css("background-color", "#ffa5ab");
-    $("#c-5").css("background-color", "#ffc6dd");
+
+    //Gathering Offsets
+    var bucketListPos = $("#bucket-list").offset().top;
+    
+    $("#c-1").css("background-color", "#92a8d1");//"#5EBD3E");//"#450920");
+    $("#c-2").css("background-color", "#034f84");//"#FFB900");//#a53860");
+    $("#c-3").css("background-color", "#f7786b");//"#F78200");//#da627d");
+    $("#c-4").css("background-color", "#f7cac9");//"#E23838");//"#ffa5ab");
+    $("#c-5").css("background-color", "#f7cac9");//"#973999");//"#ffc6dd");
     $("#c-1").css("width", "7000%");
     //Color Stuff
     var currentColor = 1;
@@ -15,12 +19,12 @@ $(document).ready(function () {
         //50px transition area
         //so c-2 should be full width 100px ftom the top
         var c1Top = 0.0;
-        var c1Bottom = 100.0;
-        var c2Top = 219.0;
-        var c2Bottom = 500.0;
-        var c3Top = 620.0;
-        var c3Bottom = 900.0;
-        var c4Top = 1100;
+        var c1Bottom = 50.0;
+        var c2Top = 150.0;
+        var c2Bottom = 300.0;
+        var c3Top =bucketListPos;// 620.0;
+        var c3Bottom = bucketListPos + 100;//900.0;
+        var c4Top = 900;
         var c4Bottom = 1200;
         console.log(scrollPos);
          if(scrollPos < c1Bottom && scrollPos >= c1Top) {

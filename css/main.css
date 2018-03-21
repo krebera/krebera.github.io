@@ -200,10 +200,10 @@ body {
   height: 45%;
   width: 5%;
   column-width: 20px;
-  column-gap: 24px;
+  column-gap: 20px;
 }
 
-.social-bar-item {
+.social-bar-item a{
   font-size: 40px;
   color: black;
 }
