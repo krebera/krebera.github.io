@@ -1,0 +1,18 @@
+{
+  "name": "keenan",
+  "homepage": "https://github.com/krebera/krebera.github.io",
+  "description": "Packages for my website",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "components-font-awesome": "^5.0.6",
+    "font-awesome": "^5.0.8"
+  }
+}
