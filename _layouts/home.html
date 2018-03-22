@@ -14,8 +14,8 @@
 	<link rel="stylesheet" type="text/css" href="/css/animate.css">
 </head>
 
-<body>
-	<div class="rotated">
+<body id="bg">
+	<div class="rotated" id="rotated">
 		<div class="color-grid-special" id="c-1"></div>
 		<div class="color-grid" id="c-2"></div>
 		<div class="color-grid" id="c-3"></div>
@@ -24,6 +24,17 @@
 	</div>
 	<div class="container">
 		{{ content }}
+	</div>
+	<div class="blog">
+		<ul id="blog">
+			{% for post in site.posts %}
+			<li class="post-box">
+				<h1 class="post-title">{{ post.title }}</h1>
+				<time datetime="{{ post.date | date: " %Y-%m-%d " }}">{{ post.date | date_to_long_string }}</time>
+				{{ post.content }}
+			</li>
+			{% endfor %}
+		</ul>
 	</div>
 
 	<!-- /.container -->

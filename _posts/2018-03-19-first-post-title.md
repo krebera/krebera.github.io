@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "First Post"
-date: 2018-03-19
+date: 2018-03-22
+categories:
+tags:
 ---
 
-Using Jekyll for some dope shit
+Welcome to the ding dang website.

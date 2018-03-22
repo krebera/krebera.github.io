@@ -2,19 +2,40 @@ $(document).ready(function () {
     // jQuery methods go here...
     console.log("ready!");
 
+    $(".link-icon").hover(function (){
+        $(this).addClass("animated pulse");
+    }, function () {
+            $(this).removeClass('animated pulse');
+        });
+
     //Gathering Offsets
     var bucketListPos = $("#bucket-list").offset().top;
-    
-    $("#c-1").css("background-color", "#92a8d1");//"#5EBD3E");//"#450920");
-    $("#c-2").css("background-color", "#034f84");//"#FFB900");//#a53860");
-    $("#c-3").css("background-color", "#f7786b");//"#F78200");//#da627d");
-    $("#c-4").css("background-color", "#f7cac9");//"#E23838");//"#ffa5ab");
-    $("#c-5").css("background-color", "#f7cac9");//"#973999");//"#ffc6dd");
+    var faded = false;
+    var fadeBoundary = 1800;
+
+    $("#c-1").css("background-color", "#252422");//"#92a8d1");//"#5EBD3E");//"#450920");
+    $("#c-2").css("background-color", "#2c497f");//"#034f84");//"#FFB900");//#a53860");
+    $("#c-3").css("background-color", "#eb5e28");//"#f7786b");//"#F78200");//#da627d");
+    $("#c-4").css("background-color", "#2541b2");//"#f7cac9");//"#E23838");//"#ffa5ab");
+    $("#c-5").css("background-color", "#fdfffc");//"#ffffff");//"#973999");//"#ffc6dd");
     $("#c-1").css("width", "7000%");
+
     //Color Stuff
-    var currentColor = 1;
     $(window).scroll(function () {
         var scrollPos = $(document).scrollTop();
+
+            if(scrollPos > fadeBoundary & !faded) {
+            $("#social-bar").fadeOut("fast");
+            $("body").css("background-color", "#fdfffc");
+            $("#rotated").fadeOut("fast");
+            faded = true;
+    } else if(scrollPos < fadeBoundary & faded) {
+            $("#social-bar").fadeIn("fast");
+            $("body").css("background-color", "slategrey");
+            $("#rotated").fadeIn("fast");
+            faded = false;
+    }
+
         //c-1 should be full width at 50px from the top
         //50px transition area
         //so c-2 should be full width 100px ftom the top
@@ -22,11 +43,12 @@ $(document).ready(function () {
         var c1Bottom = 50.0;
         var c2Top = 150.0;
         var c2Bottom = 300.0;
-        var c3Top =bucketListPos;// 620.0;
+        var c3Top = bucketListPos;// 620.0;
         var c3Bottom = bucketListPos + 100;//900.0;
-        var c4Top = 900;
-        var c4Bottom = 1200;
-        console.log(scrollPos);
+        var c4Top = 1000;
+        var c4Bottom = 1300;
+        var c5Top = 1500;
+        //console.log(scrollPos);
          if(scrollPos < c1Bottom && scrollPos >= c1Top) {
              $("#c-1").css("width", "7000%");
              $("#c-2").css("width", "20%");
@@ -74,7 +96,21 @@ $(document).ready(function () {
             $("#c-2").css("width", "20%");
             $("#c-3").css("width", "20%");
             $("#c-4").css("width", "7000%");
-            $("#c-5").css("width", "2xr0%");
+            $("#c-5").css("width", "20%");
+        } else if(scrollPos >= c4Bottom && scrollPos < c5Top) {
+            var thisc4 = -(1.0/(c5Top - c4Bottom))*(scrollPos - c4Bottom) + 1.0;
+            $("#c-4").css("width", (thisc4 * 7000)+"%");
+            var thisc5 = (1.0/(c5Top - c4Bottom))*(scrollPos - c4Bottom);
+            $("#c-5").css("width", (thisc5 * 7000)+"%");
+            $("#c-1").css("width", "20%");
+            $("#c-2").css("width", "20%");
+            $("#c-3").css("width", "20%");
+        } else {
+            $("#c-1").css("width", "20%");
+            $("#c-2").css("width", "20%");
+            $("#c-3").css("width", "20%");
+            $("#c-4").css("width", "20%");
+            $("#c-5").css("width", "7000%");
         }
     });
 });
