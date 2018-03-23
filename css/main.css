@@ -124,6 +124,16 @@ body {
   text-align: center;
 }
 
+.link-icon a{
+  font-family: 'Lato';
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
 .link-icon img {
   color: white;
   max-width: 60%;
@@ -230,9 +240,33 @@ body {
   font-family: 'Lato';
 }
 
+.tag-icon{
+  width: 70px;
+  height: auto;
+  transform: rotate(20deg);
+  margin-right: 5px;
+}
+
+.tag-title {
+  font-family: 'Lato';
+  left: 50px;
+  position: relative;
+  opacity: 0.8;
+}
+
+.tag-blurb {
+  font-family: 'Lato';
+  color: rgba(20, 20, 50, 0.8);
+  left: 100px;
+  position: relative;
+  width: 80%;
+  background-color: rgba(20, 20, 50, 0.2);
+  padding: 15px;
+  border-radius: 15px;
+}
+
 .post-box {
-  color: darkgrey;
-  background-color: white;
+  color: rgb(100, 100, 120);
   border-radius: 15px;
   width: 80%;
   position: relative;

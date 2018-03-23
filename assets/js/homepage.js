@@ -14,7 +14,7 @@ $(document).ready(function () {
     var fadeBoundary = 1800;
 
     $("#c-1").css("background-color", "#252422");//"#92a8d1");//"#5EBD3E");//"#450920");
-    $("#c-2").css("background-color", "#2c497f");//"#034f84");//"#FFB900");//#a53860");
+    $("#c-2").css("background-color", "#252422");//"#2c497f");//"#034f84");//"#FFB900");//#a53860");
     $("#c-3").css("background-color", "#eb5e28");//"#f7786b");//"#F78200");//#da627d");
     $("#c-4").css("background-color", "#2541b2");//"#f7cac9");//"#E23838");//"#ffa5ab");
     $("#c-5").css("background-color", "#fdfffc");//"#ffffff");//"#973999");//"#ffc6dd");
@@ -43,7 +43,7 @@ $(document).ready(function () {
         var c1Bottom = 50.0;
         var c2Top = 150.0;
         var c2Bottom = 300.0;
-        var c3Top = bucketListPos;// 620.0;
+        var c3Top = bucketListPos - 50;// 620.0;
         var c3Bottom = bucketListPos + 100;//900.0;
         var c4Top = 1000;
         var c4Bottom = 1300;
