@@ -269,7 +269,6 @@
 
 .post-box {
   color: rgb(100, 100, 120);
-  border-radius: 15px;
   width: 80%;
   position: relative;
   margin-left: auto;
@@ -279,6 +278,7 @@
 }
 .post-box h1 {
   color: #2a2b2e;
+  margin-bottom: 2px;
 }
 
 /* ---- Nav Header ---- */
@@ -403,6 +403,24 @@
   display: none;
 }
 
+.ender {
+  color: darkgray;
+  font-family: 'Lato';
+  text-align: center;
+  margin: auto;
+  width: 80%;
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.ender img {
+  width: 50px;
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+
 /* ------ MOBILE TIME -------- */
 /*------ TABLET ----- */
 @media only screen and (max-width: 8300px) {
@@ -457,11 +475,12 @@
   /*Blurb*/
   .padding-wrap {
     width: 100%;
-    background-color: rgba(20, 20, 50, 0.3);
+    background-color: transparent;
   }
 
   .blurb {
     text-align: left;
+    background-color: transparent;
   }
 
   /*Post Filters*/
@@ -475,7 +494,7 @@
   }
 
   .link-grid {
-    background-color: rgba(20, 20, 50, 0.3);
+    background-color: rgba(20, 20, 50, 0.8);
     border-style: none;
     grid-template-columns: 33% 33% 33%;
   }
@@ -486,10 +505,41 @@
   }
   .bucket-list {
     width: 100%;
-    background-color: rgba(20, 20, 50, 0.3);
+    background-color: rgba(20, 20, 50, 0.8);
   }
 
   .brain-graphic {
     width: 100%;
+  }
+
+  /*Posts*/
+  .post-box {
+    width: 100%;
+    margin-left: -20px;
+    margin-right: 0;
+  }
+
+  .post-box p {
+    font-size: 17px;
+  }
+
+  .tag-blurb {
+    width: 90%;
+    left: 0;
+    padding: 10px;
+    background-color: whitesmoke;
+  }
+
+  .tag-title {
+    font-size: 30px;
+    left: 0px;
+    text-align: center;
+  }
+
+  .tag-icon {
+    width: 60px;
+    display: block;
+    margin: auto;
+    margin-bottom: 8px;
   }
 }

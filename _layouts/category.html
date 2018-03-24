@@ -37,13 +37,16 @@
                 {% endif %}
             {% endfor %}
             {% unless posts %}
-                <h3 style="width:100%; text-align: center; color:darkgray; font-size: 40px; margin-top: 40px;">No posts yet! Keenan has been lazy.<br> Go yell at him or something.</h3>
+                <h3 style="width:100%; text-align: center; color:darkgray; font-size: 30px; margin-top: 40px;">No posts yet! Keenan has been lazy.<br> Go yell at him or something.</h3>
             {% endunless %}
         </ul>
     </div>
 
     <!-- /.container -->
     <footer>
+            {% if posts %}
+            {% include footer.html %}
+            {% endif %}
     </footer>
 </body>
 
