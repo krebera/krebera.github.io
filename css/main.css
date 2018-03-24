@@ -4,7 +4,7 @@
   --pink-muted: #f7cac9;
   --pink-strong: #f7786b;
 }
-body {
+.home-bg {
   /*background-image: url("/assets/images/bg-4.jpg");*/
   background-repeat: repeat;
   background-color: slategrey;
@@ -137,20 +137,28 @@ body {
   mix-blend-mode: color-dodge;
 }
 
-.blurb {
+.padding-wrap {
+  display: block;
+  width: 50%;
+  padding: 0;
   margin-left: auto;
   margin-right: auto;
+  z-index: 5;
+  position: relative;
+  mix-blend-mode: hard-light;
+  background-color: rgba(20, 20, 50, 0.8);
+  border-radius: 10px;
+  overflow-wrap: normal;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.blurb {
   font-family: 'Open Sans';
   color: rgba(255, 255, 255, 0.8);
   display: block;
-  width: 50%;
   text-align: center;
-  z-index: 5;
-  position: relative;
-  background-color: rgba(20, 20, 50, 0.8);
-  padding: 10px;
-  border-radius: 10px;
-  mix-blend-mode: hard-light;
+  margin: 10px;
 }
 
 .segment-header {
@@ -389,4 +397,99 @@ body {
 
 .nav-element-grid a{
   border-radius: 15px;
+}
+
+.nav-header-mobile {
+  display: none;
+}
+
+/* ------ MOBILE TIME -------- */
+/*------ TABLET ----- */
+@media only screen and (max-width: 8300px) {
+
+}
+/* ----- iPhone ----- */
+@media only screen and (max-width: 600px) {
+  /* --- Nav Header stuff --- */
+  .nav-header {
+    display: none;
+  }
+  .nav-header-mobile {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+  }
+
+  .nav-mobile-hamburger{ 
+    background-color: whitesmoke;
+    border-radius: 15px;
+    width: 55px;
+    height: 55px;
+    box-shadow: 1px 1px 3px #252422;
+    float: right;
+    margin-right: 15px;
+    color: #252422;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+  }
+
+  /* Rotated Background */
+  .rotated {
+    left: -250px;
+    top: -10px;
+  }
+  .social-bar {
+    display: none;
+  }
+
+  /*Main Title*/
+  .main-title {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+  .profpic {
+    height: 90px;
+    width: 90px;
+  }
+  
+  /*Blurb*/
+  .padding-wrap {
+    width: 100%;
+    background-color: rgba(20, 20, 50, 0.3);
+  }
+
+  .blurb {
+    text-align: left;
+  }
+
+  /*Post Filters*/
+  .link-box {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .link-box p{
+    font-size: 17px;
+  }
+
+  .link-grid {
+    background-color: rgba(20, 20, 50, 0.3);
+    border-style: none;
+    grid-template-columns: 33% 33% 33%;
+  }
+
+  /*Bucket List*/
+  .segment-header {
+    font-size: 30px;
+  }
+  .bucket-list {
+    width: 100%;
+    background-color: rgba(20, 20, 50, 0.3);
+  }
+
+  .brain-graphic {
+    width: 100%;
+  }
 }

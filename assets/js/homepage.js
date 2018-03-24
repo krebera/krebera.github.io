@@ -1,7 +1,8 @@
 var faded = false;
-
+var mobile = false;
 $(document).ready(function () {
     // jQuery methods go here...
+    mobile = $(window).width() < 600;
     console.log("ready!");
     //$("body").css("background-color", "slategrey");
     $("body").css("background-color", "#fdfffc");
@@ -32,7 +33,7 @@ function scrollUpdate(scrollPos) {
     //console.log(scrollPos);
     if (scrollPos > fadeBoundary & !faded) {
         console.log("Fading out");
-        $("#social-bar").fadeOut("fast");
+        if(!mobile) $("#social-bar").fadeOut("fast");
         $("body").css("background-color", "#fdfffc");
         $("#rotated").fadeOut("fast");
         $("#blog-header").css("color", "#2541b2");
@@ -40,7 +41,7 @@ function scrollUpdate(scrollPos) {
     } 
     else if (scrollPos < fadeBoundary & faded) {
         console.log("Fading In");
-        $("#social-bar").fadeIn("fast");
+        if(!mobile) $("#social-bar").fadeIn("fast");
         //$("body").css("background-color", "slategrey");
         $("body").css("background-color", "#fdfffc");
         $("#rotated").fadeIn("fast");
@@ -55,7 +56,7 @@ function scrollUpdate(scrollPos) {
     var c1Bottom = 300.0;
     var c2Top = bucketListPos - 50; // 620.0;
     var c2Bottom = bucketListPos + 100; //900.0;
-    var c3Top = 1000;
+    var c3Top = 1200;
     var c3Bottom = 1300;
     var c4Top = 1500;
     //console.log(scrollPos);
