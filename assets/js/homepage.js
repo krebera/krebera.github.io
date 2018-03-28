@@ -1,5 +1,6 @@
 var faded = false;
 var mobile = false;
+var sliderOut = true;
 $(document).ready(function () {
     // jQuery methods go here...
     mobile = $(window).width() < 600;
@@ -13,6 +14,7 @@ $(document).ready(function () {
     }, function () {
         $(this).removeClass('animated pulse');
     });
+
     $("#c-1").css("background-color", "#252422"); //"#92a8d1");//"#5EBD3E");//"#450920");
     $("#c-2").css("background-color", "#eb5e28"); //"#f7786b");//"#F78200");//#da627d");
     $("#c-3").css("background-color", "#2541b2"); //"#f7cac9");//"#E23838");//"#ffa5ab");
@@ -23,6 +25,18 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var scrollPos = $(document).scrollTop();
         scrollUpdate(scrollPos, faded);
+    });
+
+    //Social bar stuff
+    $("#slider").click(() => {
+        if(sliderOut) {
+            Velocity($("#social-bar"), {left: "-55px"}, {duration: 300, easing: [250, 15]});
+            $("#slider").css({'transform':'rotate(180deg)'});
+        } else {
+            Velocity($("#social-bar"), {left: "0px"}, {duration: 300, easing: [250, 15]});
+            $("#slider").css({'transform':'rotate(0deg)'});
+        }
+        sliderOut = !sliderOut;
     });
 });
 
