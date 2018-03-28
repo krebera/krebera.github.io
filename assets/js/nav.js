@@ -16,7 +16,8 @@ $(document).ready(function () {
     if (mobile) {
 
         //Burger Rotate
-        $("#hamburger").click(() => {
+        $("#burger").click(() => {
+
             if (menu1) {
                 $("#burger").css({
                     'transform': 'rotate(0deg)',
@@ -60,6 +61,7 @@ $(document).ready(function () {
                 $("#hamburger").css({
                     'backgroundColor': '#252422'
                 });
+                rotated = false;
             }
             filterDropdown = false;
             $("#filtersTest").slideUp("fast");
@@ -90,8 +92,10 @@ $(document).ready(function () {
                 $("#moreDropdown").slideUp("fast");
                 $("#more").css("color", "whitesmoke");
             }
+
             if (!filterDropdown) {
                 if (!rotated) {
+                    console.log("rotating");
                     $("#hamburger").css({
                         'transform': 'rotate(90deg)',
                         '-webkit-transform': 'rotate(90deg)',
