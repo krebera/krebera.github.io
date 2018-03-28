@@ -268,17 +268,67 @@
 }
 
 .post-box {
-  color: rgb(100, 100, 120);
+  color:rgb(40, 40, 40);
   width: 80%;
   position: relative;
   margin-left: auto;
   margin-right: auto;
   mix-blend-mode: multiply;
-  font-family: 'Open Sans'
+  font-family: 'Open Sans';
+  font-size: 15px;
+  border-bottom: 1px dotted rgb(200, 200, 200);
+  padding-bottom: 10px;
 }
 .post-box h1 {
   color: #2a2b2e;
   margin-bottom: 2px;
+}
+
+.post-box blockquote {
+  padding-left: 5px;
+  border-left: 2px dashed rgb(150, 150, 150);
+  font-style: italic;
+  font-size: 18px;
+}
+
+.post-box a {
+  text-decoration: none;
+ font-weight: bold;
+ font-size: 16px;
+  color: rgb(100, 100, 120);
+}
+
+.post-box .tag-array {
+  color: rgb(150, 150, 150);
+  opacity: 0.7;
+}
+
+.post-box .tag-bubble {
+  font-family: 'Lato';
+  color: white;
+  background-color: rgb(180, 180, 180);
+  border-radius: 15px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-bottom: 4px;
+  padding-top: 2px;
+}
+
+.post-box time {
+  color: rgb(150, 150, 150);
+}
+
+.post-box img {
+  display: block;
+  border-radius: 10px;
+  max-width: 70%;
+  max-height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 /* ---- Nav Header ---- */
@@ -401,6 +451,29 @@
 
 .nav-header-mobile {
   display: none;
+}
+
+.nav-mobile-dropdown-content {
+  background-color: whitesmoke;
+  border-radius: 10px 0px 10px 10px;
+  position: relative;
+  float: left;
+  left: -195px;
+  top: -20px;
+  width: 250px;
+  display: none;
+  flex-direction: column;
+  box-shadow: -2px 4px 4px black;
+  overflow: hidden;
+  animation-duration: 0.5s;
+}
+
+.nav-mobile-dropdown-content a{
+  border-bottom: 1px solid grey;
+  color: #2541b2;
+  text-decoration: none;
+  font-family: 'Lato';
+  text-align: left;
 }
 
 .ender {

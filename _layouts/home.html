@@ -12,8 +12,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
 	<link rel="stylesheet" type="text/css" href="/css/animate.css">
-	<meta id="view" name="viewport" content="width=device-width, initial-scale=1.0"/>
-	{% include nav-header.html %}
+	<meta id="view" name="viewport" content="width=device-width, initial-scale=1.0" /> {% include nav-header.html %}
 </head>
 
 <body id="bg" class="home-bg">
@@ -33,6 +32,12 @@
 				<h1 class="post-title">{{ post.title }}</h1>
 				<time datetime="{{ post.date | date: " %Y-%m-%d " }}">{{ post.date | date_to_long_string }}</time>
 				{{ post.content }}
+				<span class="tag-array">
+					{% if post.tags[0] %}
+					<i class="fas fa-tags"></i>
+					{% for tag in post.tags %}
+					<span class="tag-bubble">{{tag}}</span>{% endfor %} {% endif %}
+				</span>
 			</li>
 			{% endfor %}
 		</ul>
@@ -40,7 +45,7 @@
 
 	<!-- /.container -->
 	<footer>
-			{% include footer.html %}
+		{% include footer.html %}
 	</footer>
 </body>
 

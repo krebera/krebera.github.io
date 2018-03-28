@@ -6,55 +6,110 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/font-awesome/svg-with-js/js/fontawesome-all.js"></script>
     <script src='bower_components/dyn-css/lib/dyncss.js' type='text/javascript' /></script>
+    <script src='/assets/js/nav.js' type='text/javascript' /></script>
     <!-- link to stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" type="text/css" href="/css/animate.css">
-    <meta id="view" name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta id="view" name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <!-- Mobile Version -->
 <div class="nav-header-mobile">
-    <div class="nav-mobile-hamburger">
-            <i class="fas fa-bars"></i>
+    <div class="nav-mobile-hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+        <div class="nav-mobile-dropdown">
+            <div class="nav-mobile-dropdown-content" id="mobile-menu-1">
+                <a href="google.com">
+                    <i class="fas fa-home"></i> Home</a>
+                <a href="google.com">
+                    <i class="fas fa-book"></i> Blog</a>
+                <a href="google.com">
+                    <i class="fas fa-filter"></i> Filters
+                    <i class="fas fa-angle-right"></i>
+                </a>
+                <a href="google.com">
+                    <i class="fas fa-certificate"></i> Featured
+                    <i class="fas fa-angle-right" style="text-align:right;right:-10px;position: relative;"></i>
+                </a>
+                <a href="google.com">
+                    <i class="fas fa-ellipsis-h"></i> More
+                    <i class="fas fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="nav-mobile-dropdown">
+            <div class="nav-mobile-dropdown-content" id="mobile-menu-1">
+                    <a href="google.com">MENU 2 a</a>
+                    <a href="google.com">MENU 2 a</a>
+            </div>
+        </div>
     </div>
 </div>
 <!-- Desktop Version -->
+
 <body style="overflow-x:hidden;">
     <div class="nav-header">
-        <a href={{ site.baseurl }}{% link index.html %} class="nav-element"><i class="fas fa-home"></i>  Home</a>
-        <a href="/index.html#blog-header" class="nav-element"><i class="fas fa-book"></i>  Blog</a>
+        <a href={{ site.baseurl }}{% link index.html %} class="nav-element">
+            <i class="fas fa-home"></i> Home</a>
+        <a href="/index.html#blog-header" class="nav-element">
+            <i class="fas fa-book"></i> Blog</a>
         <div class="nav-element-dropdown nav-element">
-                <button class="nav-element-dropdown-button"><i class="fas fa-filter"></i>   Filters <i class="fas fa-caret-down"></i></button>
-                <div class="nav-element-dropdown-content">
-                    <!--<a class="nav-element" href="google.com"><img src="/assets/images/icons/hack.png"> Hackery</img></a>
+            <button class="nav-element-dropdown-button">
+                <i class="fas fa-filter"></i> Filters
+                <i class="fas fa-caret-down"></i>
+            </button>
+            <div class="nav-element-dropdown-content">
+                <!--<a class="nav-element" href="google.com"><img src="/assets/images/icons/hack.png"> Hackery</img></a>
                     <a class="nav-element" href="google.com"> Poop </a>
                     <a class="nav-element" href="google.com"> Poop </a>-->
-                    <div class="nav-element-grid">
-                        <a href={{ site.baseurl }}{% link gamedev.html %}><img src="/assets/images/icons/game-dark.png"></img></a>
-                        <a href={{ site.baseurl }}{% link music.html %}><img src="/assets/images/icons/music-dark.png"></img></a>
-                        <a href={{ site.baseurl }}{% link hack.html %}><img src="/assets/images/icons/hack-dark.png"></img></a>
-                        <a href={{ site.baseurl }}{% link appdev.html %}><img src="/assets/images/icons/phone-dark.png"></img></a>
-                        <a href={{ site.baseurl }}{% link composition.html %}><img src="/assets/images/icons/quill-dark.png"></img></a>
-                        <a href={{ site.baseurl }}{% link webdev.html %}><img src="/assets/images/icons/programming-dark.png"></img></a>
-                        <a href={{ site.baseurl }}{% link design.html %}><img src="/assets/images/icons/design-dark.png"></img></a>
-                        <a href={{ site.baseurl }}{% link art.html %}><img src="/assets/images/icons/art-dark.png"></img></a>
+                <div class="nav-element-grid">
+                    <a href={{ site.baseurl }}{% link gamedev.html %}>
+                        <img src="/assets/images/icons/game-dark.png"></img>
+                    </a>
+                    <a href={{ site.baseurl }}{% link music.html %}>
+                        <img src="/assets/images/icons/music-dark.png"></img>
+                    </a>
+                    <a href={{ site.baseurl }}{% link hack.html %}>
+                        <img src="/assets/images/icons/hack-dark.png"></img>
+                    </a>
+                    <a href={{ site.baseurl }}{% link appdev.html %}>
+                        <img src="/assets/images/icons/phone-dark.png"></img>
+                    </a>
+                    <a href={{ site.baseurl }}{% link composition.html %}>
+                        <img src="/assets/images/icons/quill-dark.png"></img>
+                    </a>
+                    <a href={{ site.baseurl }}{% link webdev.html %}>
+                        <img src="/assets/images/icons/programming-dark.png"></img>
+                    </a>
+                    <a href={{ site.baseurl }}{% link design.html %}>
+                        <img src="/assets/images/icons/design-dark.png"></img>
+                    </a>
+                    <a href={{ site.baseurl }}{% link art.html %}>
+                        <img src="/assets/images/icons/art-dark.png"></img>
+                    </a>
                 </div>
             </div>
         </div>
         <div class="nav-element-dropdown nav-element">
-            <button class="nav-element-dropdown-button"><i class="fas fa-certificate"></i>   Featured <i class="fas fa-caret-down"></i></button>
+            <button class="nav-element-dropdown-button">
+                <i class="fas fa-certificate"></i> Featured
+                <i class="fas fa-caret-down"></i>
+            </button>
             <div class="nav-element-dropdown-content">
-                    <a href={{ site.baseurl }}{% link unfinished.html %}>Products</a>
-                    <a href={{ site.baseurl }}{% link unfinished.html %}>Other Stuff</a>
+                <a href={{ site.baseurl }}{% link unfinished.html %}>Products</a>
+                <a href={{ site.baseurl }}{% link unfinished.html %}>Other Stuff</a>
             </div>
         </div>
         <div class="nav-element-dropdown nav-element">
-                <button class="nav-element-dropdown-button"><i class="fas fa-ellipsis-h"></i>   More <i class="fas fa-caret-down"></i></button>
-                <div class="nav-element-dropdown-content">
-                        <a href={{ site.baseurl }}{% link attributions.html %}>Attributions</a>
-                        <a href={{ site.baseurl }}{% link unfinished.html %}>Contact</a>
-                </div>
+            <button class="nav-element-dropdown-button">
+                <i class="fas fa-ellipsis-h"></i> More
+                <i class="fas fa-caret-down"></i>
+            </button>
+            <div class="nav-element-dropdown-content">
+                <a href={{ site.baseurl }}{% link attributions.html %}>Attributions</a>
+                <a href={{ site.baseurl }}{% link unfinished.html %}>Contact</a>
             </div>
+        </div>
     </div>
 </body>
 

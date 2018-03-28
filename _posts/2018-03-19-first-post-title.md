@@ -2,8 +2,7 @@
 layout: post
 title: "First Post"
 date: 2018-03-19
-categories:
 tags:
 ---
 
-Welcome to the ding dang website.
+Well, I've written a new website. Time to start porting stuff over.
