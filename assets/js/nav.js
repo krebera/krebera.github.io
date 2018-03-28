@@ -16,7 +16,7 @@ $(document).ready(function () {
     if (mobile) {
 
         //Burger Rotate
-        $("#burger").click(() => {
+        $("#hamburger").click(() => {
             if (menu1) {
                 $("#burger").css({
                     'transform': 'rotate(0deg)'
