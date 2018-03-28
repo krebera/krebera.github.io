@@ -19,7 +19,11 @@ $(document).ready(function () {
         $("#hamburger").click(() => {
             if (menu1) {
                 $("#burger").css({
-                    'transform': 'rotate(0deg)'
+                    'transform': 'rotate(0deg)',
+                    '-webkit-transform': 'rotate(0deg)',
+                    '-moz-transform' : 'rotate(0deg)',
+                    '-ms-transform' : 'rotate(0deg)',
+                    '-o-transform' : 'rotate(0deg)'
                 });
                 $("#burger").css({
                     'color': '#252422'
@@ -28,15 +32,27 @@ $(document).ready(function () {
                     'backgroundColor': 'whitesmoke'
                 });
                 $("#hamburger").css({
-                    'transform': 'rotate(0deg)'
+                    'transform': 'rotate(0deg)',
+                    '-webkit-transform': 'rotate(0deg)',
+                    '-moz-transform' : 'rotate(0deg)',
+                    '-ms-transform' : 'rotate(0deg)',
+                    '-o-transform' : 'rotate(0deg)'
                 });
                 $("#hamburger .nav-mobile-item").css({
-                    'transform': 'rotate(0deg)'
+                    'transform': 'rotate(0deg)',
+                    '-webkit-transform': 'rotate(0deg)',
+                    '-moz-transform' : 'rotate(0deg)',
+                    '-ms-transform' : 'rotate(0deg)',
+                    '-o-transform' : 'rotate(0deg)'
                 });
                 rotated = false;
             } else {
                 $("#burger").css({
-                    'transform': 'rotate(90deg)'
+                    'transform': 'rotate(90deg)',
+                    '-webkit-transform': 'rotate(90deg)',
+                    '-moz-transform' : 'rotate(90deg)',
+                    '-ms-transform' : 'rotate(90deg)',
+                    '-o-transform' : 'rotate(90deg)'
                 });
                 $("#burger").css({
                     'color': 'whitesmoke'
@@ -77,10 +93,18 @@ $(document).ready(function () {
             if (!filterDropdown) {
                 if (!rotated) {
                     $("#hamburger").css({
-                        'transform': 'rotate(90deg)'
+                        'transform': 'rotate(90deg)',
+                        '-webkit-transform': 'rotate(90deg)',
+                        '-moz-transform' : 'rotate(90deg)',
+                        '-ms-transform' : 'rotate(90deg)',
+                        '-o-transform' : 'rotate(90deg)'
                     });
                     $("#hamburger .nav-mobile-item").css({
-                        'transform': 'rotate(-90deg)'
+                        'transform': 'rotate(-90deg)',
+                        '-webkit-transform': 'rotate(-90deg)',
+                        '-moz-transform' : 'rotate(-90deg)',
+                        '-ms-transform' : 'rotate(-90deg)',
+                        '-o-transform' : 'rotate(-90deg)'
                     });
                     $("#hamburger .nav-mobile-item").css({
                         'border-bottom': 'none'
@@ -116,10 +140,18 @@ $(document).ready(function () {
             if (!featuredDropdown) {
                 if (!rotated) {
                     $("#hamburger").css({
-                        'transform': 'rotate(90deg)'
+                        'transform': 'rotate(90deg)',
+                        '-webkit-transform': 'rotate(90deg)',
+                        '-moz-transform' : 'rotate(90deg)',
+                        '-ms-transform' : 'rotate(90deg)',
+                        '-o-transform' : 'rotate(90deg)'
                     });
                     $("#hamburger .nav-mobile-item").css({
-                        'transform': 'rotate(-90deg)'
+                        'transform': 'rotate(-90deg)',
+                        '-webkit-transform': 'rotate(-90deg)',
+                        '-moz-transform' : 'rotate(-90deg)',
+                        '-ms-transform' : 'rotate(-90deg)',
+                        '-o-transform' : 'rotate(-90deg)'
                     });
                     $("#hamburger .nav-mobile-item").css({
                         'border-bottom': 'none'
@@ -155,10 +187,18 @@ $(document).ready(function () {
             if (!moreDropdown) {
                 if (!rotated) {
                     $("#hamburger").css({
-                        'transform': 'rotate(90deg)'
+                        'transform': 'rotate(90deg)',
+                        '-webkit-transform': 'rotate(90deg)',
+                        '-moz-transform' : 'rotate(90deg)',
+                        '-ms-transform' : 'rotate(90deg)',
+                        '-o-transform' : 'rotate(90deg)'
                     });
                     $("#hamburger .nav-mobile-item").css({
-                        'transform': 'rotate(-90deg)'
+                        'transform': 'rotate(90deg)',
+                        '-webkit-transform': 'rotate(-90deg)',
+                        '-moz-transform' : 'rotate(-90deg)',
+                        '-ms-transform' : 'rotate(-90deg)',
+                        '-o-transform' : 'rotate(-90deg)'
                     });
                     $("#hamburger .nav-mobile-item").css({
                         'border-bottom': 'none'

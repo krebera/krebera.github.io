@@ -8,7 +8,10 @@
   /*background-image: url("/assets/images/bg-4.jpg");*/
   background-repeat: repeat;
   background-color: slategrey;
-  transition: background-color 0.5s ease;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 .bg {
   width: 100%;
@@ -172,7 +175,10 @@
   text-align: center;
   position: relative;
   z-index: 5;
-  transition: color 0.25s ease;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
 }
 
 .bucket-list {
@@ -268,6 +274,9 @@
   background-color: transparent;
   cursor: pointer;
   display: inline-block;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -401,7 +410,10 @@
   position: relative;
   top: 0;
   bottom: 0;
-  transition: background-color 0.25s ease;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
   border-right: 1px solid black;
   color: whitesmoke;
   text-decoration: none;
@@ -443,7 +455,10 @@
   z-index: 1;
   overflow: hidden;
   border-radius: 0px 0px 10px 10px;
-  transition: opacity 1.0s;
+  -webkit-transition: 1.0s;
+  -moz-transition: 1.0s;
+  -o-transition: 1.0s;
+  transition: 1.0s;
 }
 
 /* Links inside the dropdown */
@@ -456,7 +471,10 @@
   text-align: left;
   background-color: #fdfffc;
   height: 30px;
-  transition: background-color 0.25s ease;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
   line-height: 30px;
   font-size: 16px;
 }
@@ -510,11 +528,17 @@
   text-decoration: none;
   font-family: 'Lato';
   text-align: center;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 
 .nav-mobile-item a{
   color: whitesmoke;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -624,6 +648,9 @@
     text-align: center;
     line-height: 60px;
     font-size: 30px;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
   }
 
