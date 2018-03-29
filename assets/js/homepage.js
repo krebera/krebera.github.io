@@ -28,7 +28,7 @@ $(document).ready(function () {
     });
 
     //Social bar stuff
-    $("#slider").click(() => {
+    $("#slider").on('click',() => {
         if(sliderOut) {
             Velocity($("#social-bar"), {left: "-55px"}, {duration: 300, easing: [250, 15]});
             $("#slider").css({'transform':'rotate(180deg)'});

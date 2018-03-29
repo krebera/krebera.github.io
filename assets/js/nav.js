@@ -16,7 +16,7 @@ $(document).ready(function () {
     if (mobile) {
 
         //Burger Rotate
-        $("#burger").click(() => {
+        $("#burger").on('click',() => {
 
             if (menu1) {
                 $("#burger").css({
@@ -78,7 +78,7 @@ $(document).ready(function () {
         });
 
         //Filters Stuff
-        $("#filters").click(() => {
+        $("#filters").on('click',() => {
 
             //Turn off featured
             if (featuredDropdown) {
@@ -127,7 +127,7 @@ $(document).ready(function () {
             filterDropdown = !filterDropdown;
         });
 
-        $("#featured").click(() => {
+        $("#featured").on('click', () => {
             //Turn off filters
             if (filterDropdown) {
                 filterDropdown = false;
@@ -174,7 +174,7 @@ $(document).ready(function () {
             featuredDropdown = !featuredDropdown;
         });
 
-        $("#more").click(() => {
+        $("#more").on('click',() => {
             //Turn off filters
             if (filterDropdown) {
                 filterDropdown = false;
