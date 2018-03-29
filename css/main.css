@@ -299,6 +299,8 @@
 /* ---- Posts Formatting ---- */
 .blog ul {
   list-style-type: none;
+  position: relative;
+  left: -20px;
 }
 
 .blog{

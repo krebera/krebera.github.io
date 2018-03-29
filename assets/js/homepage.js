@@ -7,7 +7,29 @@ $(document).ready(function () {
     // jQuery methods go here...
     mobile = $(window).width() < 600;
     $("body").css("background-color", "#fdfffc");
-    
+    $("#mobile-social-bar .m-social-bar-item").css("background-color", "transparent");
+        $("#mobile-social-bar .m-social-bar-item").css("box-shadow", "none");
+        $("#hackaday a").css("color", "#252422");
+        $("#steam a").css("color", "#252422");
+        $("#facebook a").css("color", "#252422");
+        $("#linkedin a").css("color", "#252422");
+        $("#twitter a").css("color", "#252422");
+        $("#github a").css("color", "#252422");
+        $("#instagram a").css("color", "#252422");
+        $("#soundcloud a").css("color", "#252422");
+        $("#snapchat a").css("color", "#252422");
+        $("#email a").css("color", "#252422");
+        /// ------
+        $("#facebook span").css("color", "#252422");
+        $("#linkedin span").css("color", "#252422");
+        $("#twitter span").css("color", "#252422");
+        $("#github span").css("color", "#252422");
+        $("#instagram span").css("color", "#252422");
+        $("#soundcloud span").css("color", "#252422");
+        $("#snapchat span").css("color", "#252422");
+        $("#email span").css("color", "#252422");
+        $("#steam span").css("color", "#252422");
+        $("#hackaday img").css("opacity", "0.5");
 
     $(".link-icon").hover(function () {
         $(this).addClass("animated pulse");
@@ -74,8 +96,8 @@ function scrollUpdate(scrollPos) {
         $("#hamburger").css("opacity", "1");
     }
 
-    if(scrollPos <= 300 && mobile && !colorfaded) {
-        $("#mobile-social-bar .m-social-bar-item").css("background-color", "#252422");
+    if(scrollPos <= 450 && mobile && !colorfaded) {
+        $("#mobile-social-bar .m-social-bar-item").css("background-color", "transparent");
         $("#mobile-social-bar .m-social-bar-item").css("box-shadow", "none");
         $("#hackaday a").css("color", "slategrey");
         $("#steam a").css("color", "slategrey");
@@ -99,9 +121,9 @@ function scrollUpdate(scrollPos) {
         $("#steam span").css("color", "slategrey");
         $("#hackaday img").css("opacity", "0.5");
         colorfaded = true;
-    } else if(scrollPos > 300 && mobile && colorfaded){
+    } else if(scrollPos > 450 && mobile && colorfaded){
         colorfaded = false;
-        $("#mobile-social-bar .m-social-bar-item").css("background-color", "#252422");
+        $("#mobile-social-bar .m-social-bar-item").css("background-color", "transparent");
         $("#mobile-social-bar .m-social-bar-item").css("box-shadow", "none");
         $("#hackaday a").css("color", "#252422");
         $("#steam a").css("color", "#252422");
@@ -153,8 +175,8 @@ function scrollUpdate(scrollPos) {
     var c2Top = bucketListPos - 50; // 620.0;
     var c2Bottom = bucketListPos + 100; //900.0;
     var c3Top = 1200;
-    var c3Bottom = 1300;
-    var c4Top = 1500;
+    var c3Bottom = 1500;
+    var c4Top = 1800;
     //console.log(scrollPos);
     if (scrollPos < c1Bottom && scrollPos >= c1Top) {
         $("#c-1").css("width", "7000%");
