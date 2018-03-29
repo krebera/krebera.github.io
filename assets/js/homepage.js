@@ -6,6 +6,7 @@ var colorfaded = false;
 $(document).ready(function () {
     // jQuery methods go here...
     mobile = $(window).width() < 600;
+    if(!mobile) { $("#social-button").hide(); }
     $("body").css("background-color", "#fdfffc");
     $("#mobile-social-bar .m-social-bar-item").css("background-color", "transparent");
         $("#mobile-social-bar .m-social-bar-item").css("box-shadow", "none");
