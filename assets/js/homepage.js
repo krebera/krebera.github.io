@@ -1,13 +1,13 @@
 var faded = false;
 var mobile = false;
 var sliderOut = true;
-
+var colorfaded = false;
 
 $(document).ready(function () {
     // jQuery methods go here...
     mobile = $(window).width() < 600;
     $("body").css("background-color", "#fdfffc");
-    scrollUpdate($(document).scrollTop());
+    
 
     $(".link-icon").hover(function () {
         $(this).addClass("animated pulse");
@@ -20,6 +20,8 @@ $(document).ready(function () {
         $("#mobile-social-bar").show();
         $(document).scrollTop(550);
     }
+
+    scrollUpdate($(document).scrollTop());
 
     $("#c-1").css("background-color", "#252422"); //"#92a8d1");//"#5EBD3E");//"#450920");
     $("#c-2").css("background-color", "#eb5e28"); //"#f7786b");//"#F78200");//#da627d");
@@ -66,21 +68,74 @@ function scrollUpdate(scrollPos) {
     var fadeBoundary = 1800;
     //console.log(scrollPos);
 
-    if(scrollPos <= 500 & mobile) {
+    if(scrollPos <= 500 && mobile) {
         $("#hamburger").css("opacity", "0");
-    } else if (scrollPos > 500 & mobile) {
+    } else if (scrollPos > 500 && mobile) {
         $("#hamburger").css("opacity", "1");
     }
 
+    if(scrollPos <= 300 && mobile && !colorfaded) {
+        $("#mobile-social-bar .m-social-bar-item").css("background-color", "#252422");
+        $("#mobile-social-bar .m-social-bar-item").css("box-shadow", "none");
+        $("#hackaday a").css("color", "slategrey");
+        $("#steam a").css("color", "slategrey");
+        $("#facebook a").css("color", "#3b5999");
+        $("#linkedin a").css("color", "#0077b5");
+        $("#twitter a").css("color", "#1da1f3");
+        $("#github a").css("color", "#6f42c1");
+        $("#instagram a").css("color", "#d62976");
+        $("#soundcloud a").css("color", "#ff4d00");
+        $("#snapchat a").css("color", "#fffc00");
+        $("#email a").css("color", "slategrey");
+        /// ------
+        $("#facebook span").css("color", "#3b5999");
+        $("#linkedin span").css("color", "#0077b5");
+        $("#twitter span").css("color", "#1da1f3");
+        $("#github span").css("color", "#6f42c1");
+        $("#instagram span").css("color", "#d62976");
+        $("#soundcloud span").css("color", "#ff4d00");
+        $("#snapchat span").css("color", "#fffc00");
+        $("#email span").css("color", "slategrey");
+        $("#steam span").css("color", "slategrey");
+        $("#hackaday img").css("opacity", "0.5");
+        colorfaded = true;
+    } else if(scrollPos > 300 && mobile && colorfaded){
+        colorfaded = false;
+        $("#mobile-social-bar .m-social-bar-item").css("background-color", "#252422");
+        $("#mobile-social-bar .m-social-bar-item").css("box-shadow", "none");
+        $("#hackaday a").css("color", "#252422");
+        $("#steam a").css("color", "#252422");
+        $("#facebook a").css("color", "#252422");
+        $("#linkedin a").css("color", "#252422");
+        $("#twitter a").css("color", "#252422");
+        $("#github a").css("color", "#252422");
+        $("#instagram a").css("color", "#252422");
+        $("#soundcloud a").css("color", "#252422");
+        $("#snapchat a").css("color", "#252422");
+        $("#email a").css("color", "#252422");
+        /// ------
+        $("#facebook span").css("color", "#252422");
+        $("#linkedin span").css("color", "#252422");
+        $("#twitter span").css("color", "#252422");
+        $("#github span").css("color", "#252422");
+        $("#instagram span").css("color", "#252422");
+        $("#soundcloud span").css("color", "#252422");
+        $("#snapchat span").css("color", "#252422");
+        $("#email span").css("color", "#252422");
+        $("#steam span").css("color", "#252422");
+        $("#hackaday img").css("opacity", "0.5");
+    }
+
     if(mobile) { scrollPos = Math.max(scrollPos - 550, 0); }
-    if (scrollPos > fadeBoundary & !faded) {
+
+    if (scrollPos > fadeBoundary && !faded) {
         console.log("Fading out");
         if (!mobile) $("#social-bar").fadeOut("fast");
         $("body").css("background-color", "#fdfffc");
         $("#rotated").fadeOut("fast");
         $("#blog-header").css("color", "#2541b2");
         faded = true;
-    } else if (scrollPos < fadeBoundary & faded) {
+    } else if (scrollPos < fadeBoundary && faded) {
         console.log("Fading In");
         if (!mobile) $("#social-bar").fadeIn("fast");
         //$("body").css("background-color", "slategrey");

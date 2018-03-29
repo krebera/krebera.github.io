@@ -806,6 +806,7 @@
     font-size: 40px;
     text-align: left;
     box-shadow: 2px -2px 2px rgba(0,0,0,0.3);
+    transition: 0.5s;
   }
 
   .m-social-bar-item a{
@@ -816,6 +817,7 @@
     text-decoration: none;
     color: whitesmoke;
     font-family: 'Lato';
+    transition: 0.5s;
   }
 
   .m-social-bar-item img{
