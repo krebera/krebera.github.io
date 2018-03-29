@@ -263,7 +263,9 @@
   width: 100%;
   margin: auto;
   display: inline-block;
-  line-height: 100%;
+  line-height: 110%;
+  position: relative;
+  top: auto;
 }
 
 .social-bar-item img {
@@ -479,7 +481,6 @@
   -moz-transition: 1.0s;
   -o-transition: 1.0s;
   transition: 1.0s;
-  overflow-y: scroll;
 }
 
 /* Links inside the dropdown */
@@ -519,9 +520,10 @@
 .nav-element-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  height: 300px;
+  justify-content: space-between;
+  height: auto;
   padding-top: 5px;
+  padding-bottom: 10px;
 }
 
 .nav-element-grid a{
@@ -783,7 +785,7 @@
     width: 50px;
     height: 50px;
     position: absolute;
-    color: whitesmoke;
+    color: rgba(100, 100, 100, 0.8);
     font-size: 30px;
     opacity: 0.5;
     left: 15px;

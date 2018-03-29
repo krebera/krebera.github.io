@@ -65,6 +65,13 @@ function scrollUpdate(scrollPos) {
     var bucketListPos = 800;
     var fadeBoundary = 1800;
     //console.log(scrollPos);
+
+    if(scrollPos <= 500 & mobile) {
+        $("#hamburger").css("opacity", "0");
+    } else if (scrollPos > 500 & mobile) {
+        $("#hamburger").css("opacity", "1");
+    }
+
     if(mobile) { scrollPos = Math.max(scrollPos - 550, 0); }
     if (scrollPos > fadeBoundary & !faded) {
         console.log("Fading out");
