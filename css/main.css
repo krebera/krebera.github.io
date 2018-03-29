@@ -224,7 +224,7 @@
   top: 70px;
   height: 80%;
   width: 70px;
-  mix-blend-mode: normal;
+  mix-blend-mode: luminosity;
   z-index: 10;
   margin-left: -10px;
   border-radius: 0px 10px 10px 0px;
@@ -621,8 +621,13 @@
 
 /* ------~~~~~~~~~~ MOBILE TIME ~~~~~~~~-------- */
 /*------ TABLET ----- */
-@media only screen and (max-width: 8300px) {
-
+@media only screen and (max-width: 830px) {
+  .nav-element {
+    font-size: 16px;
+  }
+  .nav-element-dropdown .nav-element-dropdown-button {
+    font-size: 16px;
+  }
 }
 /* ----- iPhone ----- */
 @media only screen and (max-width: 600px) {
