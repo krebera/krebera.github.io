@@ -1,11 +1,11 @@
 var faded = false;
 var mobile = false;
 var sliderOut = true;
+
+
 $(document).ready(function () {
     // jQuery methods go here...
     mobile = $(window).width() < 600;
-    console.log("ready!");
-    //$("body").css("background-color", "slategrey");
     $("body").css("background-color", "#fdfffc");
     scrollUpdate($(document).scrollTop());
 
@@ -14,6 +14,12 @@ $(document).ready(function () {
     }, function () {
         $(this).removeClass('animated pulse');
     });
+
+    if(mobile) {
+        $("#mobile-social-bar").css("display", "block");
+        $("#mobile-social-bar").show();
+        $(document).scrollTop(550);
+    }
 
     $("#c-1").css("background-color", "#252422"); //"#92a8d1");//"#5EBD3E");//"#450920");
     $("#c-2").css("background-color", "#eb5e28"); //"#f7786b");//"#F78200");//#da627d");
@@ -28,13 +34,27 @@ $(document).ready(function () {
     });
 
     //Social bar stuff
-    $("#slider").on('click',() => {
-        if(sliderOut) {
-            Velocity($("#social-bar"), {left: "-55px"}, {duration: 300, easing: [250, 15]});
-            $("#slider").css({'transform':'rotate(180deg)'});
+    $("#slider").on('click', () => {
+        if (sliderOut) {
+            Velocity($("#social-bar"), {
+                left: "-45px"
+            }, {
+                duration: 300,
+                easing: [250, 15]
+            });
+            $("#slider").css({
+                'transform': 'rotate(180deg)'
+            });
         } else {
-            Velocity($("#social-bar"), {left: "0px"}, {duration: 300, easing: [250, 15]});
-            $("#slider").css({'transform':'rotate(0deg)'});
+            Velocity($("#social-bar"), {
+                left: "0px"
+            }, {
+                duration: 300,
+                easing: [250, 15]
+            });
+            $("#slider").css({
+                'transform': 'rotate(0deg)'
+            });
         }
         sliderOut = !sliderOut;
     });
@@ -45,17 +65,17 @@ function scrollUpdate(scrollPos) {
     var bucketListPos = 800;
     var fadeBoundary = 1800;
     //console.log(scrollPos);
+    if(mobile) { scrollPos = Math.max(scrollPos - 550, 0); }
     if (scrollPos > fadeBoundary & !faded) {
         console.log("Fading out");
-        if(!mobile) $("#social-bar").fadeOut("fast");
+        if (!mobile) $("#social-bar").fadeOut("fast");
         $("body").css("background-color", "#fdfffc");
         $("#rotated").fadeOut("fast");
         $("#blog-header").css("color", "#2541b2");
         faded = true;
-    } 
-    else if (scrollPos < fadeBoundary & faded) {
+    } else if (scrollPos < fadeBoundary & faded) {
         console.log("Fading In");
-        if(!mobile) $("#social-bar").fadeIn("fast");
+        if (!mobile) $("#social-bar").fadeIn("fast");
         //$("body").css("background-color", "slategrey");
         $("body").css("background-color", "#fdfffc");
         $("#rotated").fadeIn("fast");

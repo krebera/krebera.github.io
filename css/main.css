@@ -220,18 +220,15 @@
 
 .social-bar {
   position: fixed;
-  opacity: 0.8;
   top: 70px;
   height: 80%;
   width: 70px;
-  mix-blend-mode: luminosity;
+  mix-blend-mode: normal;
   z-index: 10;
   margin-left: -10px;
   border-radius: 0px 10px 10px 0px;
-  border: 1px dashed white;
   padding-top: 5px;
   padding-bottom: 10px;
-  background-color: rgba(20, 20, 20, 0.9);
 }
 
 .social-bar-grid {
@@ -239,18 +236,34 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   margin: auto;
   position: relative;
+  overflow: hidden;
+  border-radius: 0px 10px 15px 0px;
 }
 
 .social-bar-item {
+  margin: auto;
+  width: 100%;
+  height: 150%;
+  padding-top: 10px;
+}
+
+.social-bar-item span {
+  width: 100%;
+  text-align: center;
+  position: relative;
   margin: auto;
 }
 
 .social-bar-item a{
   font-size: 40px;
-  color: black;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  display: inline-block;
+  line-height: 100%;
 }
 
 .social-bar-item img {
@@ -338,6 +351,8 @@
   border-left: 2px dashed rgb(150, 150, 150);
   font-style: italic;
   font-size: 18px;
+  position: relative;
+  left: -20px;
 }
 
 .post-box a {
@@ -378,6 +393,11 @@
   margin-right: auto;
   margin-bottom: 5px;
   margin-top: 5px;
+}
+
+.mobile-social-bar {
+
+  display: none;
 }
 
 /* ---- Nav Header ---- */
@@ -450,7 +470,7 @@
   position: absolute;
   opacity: 0;
   background-color: #fdfffc;
-  width: 70%;
+  width: 100%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   overflow: hidden;
@@ -459,6 +479,7 @@
   -moz-transition: 1.0s;
   -o-transition: 1.0s;
   transition: 1.0s;
+  overflow-y: scroll;
 }
 
 /* Links inside the dropdown */
@@ -512,18 +533,18 @@
 }
 
 .nav-mobile-dropdown-content {
-  background-color: #252422;
-  border-radius: 0px 0px 10px 10px;
+  background-color: #333333;
+  border-radius: 0px 0px 13px 13px;
   position: absolute;
   float: left;
   width: 55px;
-  height: 308px;
+  height: 250px;
   display: none;
   flex-direction: column;
+  box-shadow: 2px 2px 2px black;
 }
 
 .nav-mobile-item {
-  border-bottom: 1px solid grey;
   color: whitesmoke;
   text-decoration: none;
   font-family: 'Lato';
@@ -543,10 +564,10 @@
 }
 
 .nav-mobile-grid {
-  width: 308px;
+  width: 250px;
   position: absolute;
   z-index: 10;
-  background-color: #252422;
+  background-color: #333333;
   display: none;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 50% 50%;
@@ -554,6 +575,7 @@
   justify-content: space-around;
   border-radius: 0px 0px 10px 10px;
   right: 75px;
+  box-shadow: 0px 2px 1px black;
 }
 
 .nav-mobile-grid a{
@@ -578,14 +600,15 @@
 }
 
 .nav-mobile-drop {
-  width: 308px;
+  width: 250px;
   position: absolute;
   z-index: 10;
-  background-color: #252422;
+  background-color: #333333;
   display: none;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 0px 0px 15px 15px;
   right: 75px;
   height: auto;
+  box-shadow: 0px 2px 1px black;
 }
 
 .nav-mobile-drop a{
@@ -598,7 +621,6 @@
   height: 55px;
   line-height: 48px;
   text-align: center;
-  border-bottom: 1px solid grey;
 }
 
 .ender {
@@ -642,6 +664,16 @@
     width: 100%;
   }
 
+  .post-box img {
+    display: block;
+    border-radius: 10px;
+    width: 100%;
+    max-height: 500px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    position: relative;
+  }
+
   .nav-mobile-hamburger{ 
     background-color: whitesmoke;
     border-radius: 15px;
@@ -657,6 +689,7 @@
     -moz-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
+    box-shadow: 0px 1px 1px #444444;
   }
 
   /* Rotated Background */
@@ -745,4 +778,47 @@
     margin: auto;
     margin-bottom: 8px;
   }
+
+  .social-button {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    color: whitesmoke;
+    font-size: 30px;
+    opacity: 0.5;
+    left: 15px;
+  }
+
+  .mobile-social-bar {
+    width: 100%;
+    height: 550px;
+    position: relative;
+    z-index: 13;
+    overflow: hidden;
+    display: none;
+  }
+
+  .m-social-bar-item {
+    width: 100%;
+    height: 50px;
+    font-size: 40px;
+    text-align: left;
+    box-shadow: 2px -2px 2px rgba(0,0,0,0.3);
+  }
+
+  .m-social-bar-item a{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    right: -60px;
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Lato';
+  }
+
+  .m-social-bar-item img{
+    width: auto;
+    height: 40px;
+  }
+
 }
