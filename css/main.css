@@ -300,7 +300,7 @@
 .blog ul {
   list-style-type: none;
   position: relative;
-  left: 0px;
+  left: 10px;
   width: 95%;
 }
 
