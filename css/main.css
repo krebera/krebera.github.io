@@ -365,6 +365,12 @@
   font-size: 24px;
   display: block;
 }
+.post-title {
+  color: #2a2b2e;
+  margin-bottom: 2px;
+  font-size: 24px;
+  display: block;
+}
 
 .post-box blockquote {
   padding-left: 5px;
