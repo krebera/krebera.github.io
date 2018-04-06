@@ -86,9 +86,7 @@ $(document).ready(function () {
 });
 
 function scrollUpdate(scrollPos) {
-    //Gathering Offsets
-    var bucketListPos = 800;
-    var fadeBoundary = 1800;
+
     //console.log(scrollPos);
 
     if(scrollPos <= 500 && mobile) {
@@ -149,7 +147,13 @@ function scrollUpdate(scrollPos) {
         $("#hackaday img").css("opacity", "0.5");
     }
 
-    if(mobile) { scrollPos = Math.max(scrollPos - 550, 0); }
+    ///if(mobile) { scrollPos = Math.max(scrollPos - 550, 0); }
+
+        //Gathering Offsets
+        var bucketListPos = $("#bucket-list").offset().top;
+        var brainPos = $("#brain").offset().top;
+        var blogPos = $("#blog-header").offset().top;
+        var fadeBoundary = blogPos - 150;
 
     if (scrollPos > fadeBoundary && !faded) {
         console.log("Fading out");
@@ -171,13 +175,14 @@ function scrollUpdate(scrollPos) {
     //c-1 should be full width at 50px from the top
     //50px transition area
     //so c-2 should be full width 100px ftom the top
+
     var c1Top = 0.0;
-    var c1Bottom = 300.0;
-    var c2Top = bucketListPos - 50; // 620.0;
-    var c2Bottom = bucketListPos + 100; //900.0;
-    var c3Top = 1200;
-    var c3Bottom = 1500;
-    var c4Top = 1800;
+    var c1Bottom = bucketListPos - 300;
+    var c2Top = bucketListPos - 50;
+    var c2Bottom = bucketListPos;
+    var c3Top = brainPos;
+    var c3Bottom = brainPos + 150;
+    var c4Top = blogPos - 100;
     //console.log(scrollPos);
     if (scrollPos < c1Bottom && scrollPos >= c1Top) {
         $("#c-1").css("width", "7000%");

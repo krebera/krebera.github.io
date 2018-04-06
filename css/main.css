@@ -300,11 +300,13 @@
 .blog ul {
   list-style-type: none;
   position: relative;
-  left: -20px;
+  left: -10px;
+  width: 95%;
 }
 
 .blog{
   font-family: 'Lato';
+  margin-left: 10px;
 }
 
 .tag-icon{
@@ -345,26 +347,36 @@
   border-bottom: 1px dotted rgb(200, 200, 200);
   padding-bottom: 10px;
 }
-.post-box h1 {
+
+.post-box h1{
   color: #2a2b2e;
   margin-bottom: 2px;
 }
-
-.post-box blockquote {
-  padding-left: 5px;
-  border-left: 2px dashed rgb(150, 150, 150);
-  font-style: italic;
-  font-size: 18px;
-  position: relative;
-  left: -20px;
-}
-
 .post-box a {
   text-decoration: none;
  font-weight: bold;
  font-size: 16px;
   color: rgb(100, 100, 120);
 }
+
+.post-box a.post-title {
+  color: #2a2b2e;
+  margin-bottom: 2px;
+  font-size: 24px;
+  display: block;
+}
+
+.post-box blockquote {
+  padding-left: 5px;
+  border-left: 2px dashed rgb(150, 150, 150);
+  font-style: italic;
+  font-size: 15px;
+  position: relative;
+  left: -30px;
+  width: 90%;
+}
+
+
 
 .post-box .tag-array {
   color: rgb(150, 150, 150);
@@ -378,7 +390,7 @@
   border-radius: 15px;
   padding-left: 6px;
   padding-right: 6px;
-  margin-left: 5px;
+  margin-left: 10px;
   margin-right: 5px;
   padding-bottom: 4px;
   padding-top: 2px;

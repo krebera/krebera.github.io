@@ -1,9 +1,19 @@
 ---
 layout: default
+comments: true
 ---
-<h1>{{ page.title }}</h1>
-<p class="meta">{{ page.date | date_to_string }}</p>
-
-<div class="post">
-  {{ content }}
+<div class="blog">
+  
+    <div class="post-box">
+      	<a class="post-title" href="{{ page.url }}">{{ page.title }}</a>
+				<time datetime="{{ page.date | date: " %Y-%m-%d " }}">{{ page.date | date_to_long_string }} • </time>
+				<a href="https://krebera.github.io{{ post.url }}#disqus_thread" style="pointer-events: none; cursor: default;"><i class="far fa-comment-alt"></i> 0</a>
+				<noscript>Please enable JavaScript to view the
+					<a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+				</noscript>
+        {{ content }}
+      </div>
 </div>
+
+
+{% include disqus_comments.html %}
