@@ -45,12 +45,12 @@
 			<li class="post-box">
 				<a class="post-title" href="{{ post.url }}" style="color: #2a2b2e;margin-bottom: 2px;font-size: 24px;display: block;">{{ post.title }}</a>
 				<time datetime="{{ post.date | date: " %Y-%m-%d " }}">{{ post.date | date_to_long_string }} • </time>
-				<a href="https://krebera.github.io{{ post.url }}#disqus_thread" style="pointer-events: none; cursor: default;"><i class="far fa-comment-alt"></i> 0</a>
+				<i class="far fa-comment-alt"></i> <a href="https://krebera.github.io{{ post.url }}#disqus_thread" style="pointer-events: none; cursor: default;">0</a>
 				<noscript>Please enable JavaScript to view the
 					<a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
 				</noscript>
 
-				<a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{post.url}}"></a>
+				
 				{{ post.content }}
 				<span class="tag-array">
 					{% if post.tags[0] %}
