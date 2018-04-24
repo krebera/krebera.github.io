@@ -330,7 +330,7 @@
   left: 100px;
   position: relative;
   width: 80%;
-  background-color: rgba(20, 20, 50, 0.2);
+  background-color: whitesmoke;
   padding: 15px;
   border-radius: 15px;
 }
@@ -714,6 +714,14 @@
     box-shadow: 0px 1px 1px #444444;
   }
 
+  .blog {
+    margin-left: 0px;
+  }
+
+  .blog ul {
+    left: 0px;
+  }
+
   /* Rotated Background */
  
   .social-bar {
@@ -782,10 +790,8 @@
   }
 
   .tag-blurb {
-    width: 90%;
-    left: 0;
-    padding: 10px;
-    background-color: whitesmoke;
+    width: auto;
+    left: 0px;
   }
 
   .tag-title {
