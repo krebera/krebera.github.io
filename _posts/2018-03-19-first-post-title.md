@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "First Post"
-date: 2018-03-19
+date: 2018-04-24
 tags:
 ---
 
-Well, I've written a new website. Time to start porting stuff over.
+YEET! I just finished my last exam and am officially a senior!
+Hopefully I can finally start making posts to this blog.
+See you all soon!
