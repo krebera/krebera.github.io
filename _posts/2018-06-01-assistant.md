@@ -18,7 +18,7 @@ Anyways, the cardboard kit that came with AIY just wasn't good enough, so I thou
 
 I decided on the name "Ava" for Autonomous Vocal Assistant. Clean and catchy.
 
-## #Design Time
+### Design Time
 Used the Concepts app again to gather measurements, take notes, and draft ideas.
 
 ![d1]({{site.url}}/assets/images/posts/2018-06-01-assistant/design1.jpg)
