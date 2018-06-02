@@ -18,7 +18,7 @@ Anyways, the cardboard kit that came with AIY just wasn't good enough, so I thou
 
 I decided on the name "Ava" for Autonomous Vocal Assistant. Clean and catchy.
 
-##Design Time
+## #Design Time
 Used the Concepts app again to gather measurements, take notes, and draft ideas.
 
 ![d1]({{site.url}}/assets/images/posts/2018-06-01-assistant/design1.jpg)
@@ -27,12 +27,12 @@ Used the Concepts app again to gather measurements, take notes, and draft ideas.
 
 Once I settled on something I moved into Fusion 360:
 
-![c1]({{site.url}}/assets/images/posts/2018-06-01-assistant/case1.jpg)
-![c2]({{site.url}}/assets/images/posts/2018-06-01-assistant/case2.jpg)
-![c3]({{site.url}}/assets/images/posts/2018-06-01-assistant/case3.jpg)
+![c1]({{site.url}}/assets/images/posts/2018-06-01-assistant/case1.png)
+![c2]({{site.url}}/assets/images/posts/2018-06-01-assistant/case2.png)
+![c3]({{site.url}}/assets/images/posts/2018-06-01-assistant/case3.png)
 
 
-##Fabrication
+### Fabrication
 I actually printed these pieces at the local library! 
 
 ![p1]({{site.url}}/assets/images/posts/2018-06-01-assistant/physical1.jpg)
