@@ -10,8 +10,8 @@ The whole circuit goes from solar panel to a USB/DC/Lipo solar charger board. Th
 
 Now a big battery lives in my backpack and is charged as the days go on by sunlight. Since I usually only use the big battery less than once a week, this a pretty nice setup, almost guaranteeing I'lll have charge when I need it!
 
-![solar01]({{site.url}}/assets/images/posts/2019-03-17-solarpanel/solar01.jpg)
+![solar01]({{site.url}}/assets/images/posts/2019-03-17-solarpanel/solar1.jpg)
 
 Yes duct tape was used liberally in the creation of this project.
 
-![solar02]({{site.url}}/assets/images/posts/2019-03-17-solarpanel/solar02.jpg)
+![solar02]({{site.url}}/assets/images/posts/2019-03-17-solarpanel/solar2.jpg)
